@@ -40,9 +40,6 @@ const ConversationPage = () => {
       const response = await axios.post("/api/conversation", {
         messages: newMessages,
       });
-      console.log("response: ", response);
-      console.log("userMessage: ", userMessage);
-      console.log("response: ", response.data);
 
       setMessages((current) => [response.data, userMessage, ...current]);
 
